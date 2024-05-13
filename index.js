@@ -17,6 +17,8 @@ app.get('/todos',function(req, res){
     res.json(todos);
 });
 
+app.use(express.json());
+
 app.post('/todos', function(req, res){
     const newTodo = res.body;
     todos.push(newTodo);
